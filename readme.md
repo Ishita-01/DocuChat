@@ -50,14 +50,15 @@ pip install -r requirements.txt
 
 ### 4. Configure API Key
 
-You need a Google Gemini API key to run the model.
-Get your key from Google AI Studio.
-Create a folder named .streamlit in the root directory.
-Inside that folder, create a file named secrets.toml.
-Add your key to the file:
-
-# .streamlit/secrets.toml
+- You need a Google Gemini API key to run the model.
+- Get your key from Google AI Studio.
+- Create a folder named .streamlit in the root directory.
+- Inside that folder, create a file named secrets.toml.
+- Add your key to the file:
+```bash
+.streamlit/secrets.toml
 GEMINI_API_KEY = "your_actual_api_key_here"
+```
 
 ---
 
@@ -78,15 +79,16 @@ streamlit run app.py
 
 ## 🧠 How It Works
 
-**Ingestion**: The app extracts text from uploaded files.
-**Chunking**: Text is split into smaller, overlapping chunks to preserve context.
-**Embedding**: The all-MiniLM-L6-v2 model converts these chunks into vector embeddings.
-**Storage**: Embeddings are stored in a temporary, in-memory ChromaDB collection.
-**Retrieval**: When you ask a question, the system searches for the most relevant text chunks.
-**Generation**: The relevant chunks + your question are sent to Gemini 2.5 Flash, which generates an answer based solely on that context.
+- **Ingestion**: The app extracts text from uploaded files.
+- **Chunking**: Text is split into smaller, overlapping chunks to preserve context.
+- **Embedding**: The all-MiniLM-L6-v2 model converts these chunks into vector embeddings.
+- **Storage**: Embeddings are stored in a temporary, in-memory ChromaDB collection.
+- **Retrieval**: When you ask a question, the system searches for the most relevant text chunks.
+- **Generation**: The relevant chunks + your question are sent to Gemini 2.5 Flash, which generates an answer based solely on that context.
 
 ---
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
