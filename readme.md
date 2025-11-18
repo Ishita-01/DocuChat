@@ -56,9 +56,9 @@ pip install -r requirements.txt
 - Inside that folder, create a file named secrets.toml.
 - Add your key to the file:
 4. Add your key to the file:
-```
-`.streamlit/secrets.toml`
+### `.streamlit/secrets.toml`
 
+```toml
 GEMINI_API_KEY = "your_actual_api_key_here"
 ```
 ---
@@ -92,6 +92,7 @@ streamlit run app.py
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
 
 
 
